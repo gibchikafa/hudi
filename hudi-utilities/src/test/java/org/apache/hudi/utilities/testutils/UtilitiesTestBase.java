@@ -306,6 +306,7 @@ public class UtilitiesTestBase {
    * @throws IOException
    */
   private static void clearHiveDb(String tempWriteablePath) throws Exception {
+  
     // Create Dummy hive sync config
     HiveSyncConfig hiveSyncConfig = getHiveSyncConfig(tempWriteablePath, "dummy");
     hiveSyncConfig.setHadoopConf(hiveTestService.getHiveConf());

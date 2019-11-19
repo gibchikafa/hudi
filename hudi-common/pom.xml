@@ -199,6 +199,36 @@
       <groupId>org.apache.hudi</groupId>
       <artifactId>hudi-io</artifactId>
       <version>${project.version}</version>
+    </dependency>
+
+    <!-- Hadoop -->
+    <dependency>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>*</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>${hadoop.groupid}</groupId>
+          <artifactId>hadoop-annotations</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-common</artifactId>
+      <classifier>tests</classifier>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>

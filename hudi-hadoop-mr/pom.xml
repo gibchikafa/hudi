@@ -70,11 +70,11 @@
 
     <!-- Hadoop -->
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-auth</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-mapreduce-client-core</artifactId>
       <exclusions>
         <!-- Log4j 1 and Reload4J dependencies are not allowed because they conflict with Log4j 2.
@@ -94,7 +94,7 @@
       </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-mapreduce-client-common</artifactId>
     </dependency>
 
@@ -131,17 +131,15 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
-      <artifactId>hudi-hadoop-common</artifactId>
-      <version>${project.version}</version>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-common</artifactId>
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
-      <artifactId>hudi-io</artifactId>
-      <version>${project.version}</version>
+      <groupId>${hadoop.groupid}</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>

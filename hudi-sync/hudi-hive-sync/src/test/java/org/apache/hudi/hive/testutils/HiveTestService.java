@@ -149,7 +149,7 @@ public class HiveTestService {
     hadoopConf.set("datanucleus.schema.autoCreateTables", "true");
     hadoopConf.set("datanucleus.autoCreateSchema", "true");
     hadoopConf.set("datanucleus.fixedDatastore", "false");
-    HiveConf conf = new HiveConf(hadoopConf, HiveConf.class);
+    HiveConf conf = new HiveConf(hadoopConf, HiveConf.class, true);
     conf.setBoolVar(ConfVars.HIVE_IN_TEST, true);
     conf.setBoolVar(ConfVars.METASTORE_SCHEMA_VERIFICATION, false);
     final int hs2ThriftPort = hadoopConf.getInt(ConfVars.HIVE_SERVER2_THRIFT_PORT.varname, HS2_THRIFT_PORT);
@@ -169,7 +169,7 @@ public class HiveTestService {
     File metastoreWarehouseDir = new File(localHiveDir, "warehouse");
     metastoreWarehouseDir.mkdir();
     conf.setVar(ConfVars.METASTOREWAREHOUSE, metastoreWarehouseDir.getAbsolutePath());
-
+    
     return conf;
   }
 

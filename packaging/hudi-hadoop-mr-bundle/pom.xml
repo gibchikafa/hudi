@@ -135,6 +135,10 @@
                   <pattern>com.fasterxml.jackson.</pattern>
                   <shadedPattern>org.apache.hudi.com.fasterxml.jackson.</shadedPattern>
                 </relocation>
+                <relocation>
+                  <pattern>org.eclipse.jetty.</pattern>
+                  <shadedPattern>org.apache.hudi.org.apache.jetty.</shadedPattern>
+                </relocation>
               </relocations>
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <filters>
