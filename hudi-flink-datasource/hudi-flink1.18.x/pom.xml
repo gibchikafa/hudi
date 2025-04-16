@@ -54,7 +54,7 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-common</artifactId>
             <version>${hadoop.version}</version>
             <scope>provided</scope>

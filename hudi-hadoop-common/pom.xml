@@ -81,7 +81,7 @@
 
     <!-- Hadoop -->
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-client</artifactId>
       <exclusions>
         <exclusion>
@@ -92,7 +92,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-hdfs</artifactId>
       <scope>provided</scope>
     </dependency>
