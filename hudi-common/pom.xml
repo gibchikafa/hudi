@@ -263,6 +263,10 @@
           <groupId>tomcat</groupId>
           <artifactId>*</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
 
@@ -288,7 +292,7 @@
     </dependency>
 
     <dependency>
-      <groupId>joda-time</groupId>
+       <groupId>joda-time</groupId>
       <artifactId>joda-time</artifactId>
       <scope>test</scope>
     </dependency>

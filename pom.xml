@@ -117,7 +117,7 @@
     <slf4j.version>1.7.36</slf4j.version>
     <joda.version>2.9.9</joda.version>
     <hadoop.groupid>io.hops</hadoop.groupid>
-    <hadoop.version>3.2.0.0-SNAPSHOT</hadoop.version>
+    <hadoop.version>3.2.0.16-EE-SNAPSHOT</hadoop.version>
     <hive.groupid>io.hops.hive</hive.groupid>
     <hive.version>3.0.0.5</hive.version>
     <hive.parquet.version>1.10.1</hive.parquet.version>
@@ -491,10 +491,10 @@
             </relocation>
             <!-- hbase -->
             <relocation>
-              <pattern>org.apache.hadoop.hbase.</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.hbase.</shadedPattern>
+              <pattern>${hadoop.groupid}.hbase.</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.hbase.</shadedPattern>
               <excludes>
-                <exclude>org.apache.hadoop.hbase.KeyValue$KeyComparator</exclude>
+                <exclude>${hadoop.groupid}.hbase.KeyValue$KeyComparator</exclude>
               </excludes>
             </relocation>
             <relocation>
@@ -506,74 +506,74 @@
               <shadedPattern>io.hops.hudi.org.apache.htrace.</shadedPattern>
             </relocation>
             <!-- hbase
-                 The classes below in org.apache.hadoop.metrics2 package come from
+                 The classes below in ${hadoop.groupid}.metrics2 package come from
                  hbase-hadoop-compat and hbase-hadoop2-compat, which have to be shaded one by one,
-                 instead of shading all classes under org.apache.hadoop.metrics2 including ones
+                 instead of shading all classes under ${hadoop.groupid}.metrics2 including ones
                  from hadoop. -->
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.MetricHistogram</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.MetricHistogram
+              <pattern>${hadoop.groupid}.metrics2.MetricHistogram</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.MetricHistogram
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.MetricsExecutor</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.MetricsExecutor
+              <pattern>${hadoop.groupid}.metrics2.MetricsExecutor</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.MetricsExecutor
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.impl.JmxCacheBuster</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.impl.JmxCacheBuster
+              <pattern>${hadoop.groupid}.metrics2.impl.JmxCacheBuster</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.impl.JmxCacheBuster
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.DefaultMetricsSystemHelper</pattern>
+              <pattern>${hadoop.groupid}.metrics2.lib.DefaultMetricsSystemHelper</pattern>
               <shadedPattern>
-                io.hops.hudi.org.apache.hadoop.metrics2.lib.DefaultMetricsSystemHelper
+                io.hops.hudi.${hadoop.groupid}.metrics2.lib.DefaultMetricsSystemHelper
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.DynamicMetricsRegistry</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.DynamicMetricsRegistry
+              <pattern>${hadoop.groupid}.metrics2.lib.DynamicMetricsRegistry</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.DynamicMetricsRegistry
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MetricsExecutorImpl</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MetricsExecutorImpl
+              <pattern>${hadoop.groupid}.metrics2.lib.MetricsExecutorImpl</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MetricsExecutorImpl
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MutableFastCounter</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MutableFastCounter
+              <pattern>${hadoop.groupid}.metrics2.lib.MutableFastCounter</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MutableFastCounter
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MutableHistogram</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MutableHistogram
+              <pattern>${hadoop.groupid}.metrics2.lib.MutableHistogram</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MutableHistogram
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MutableRangeHistogram</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MutableRangeHistogram
+              <pattern>${hadoop.groupid}.metrics2.lib.MutableRangeHistogram</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MutableRangeHistogram
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MutableSizeHistogram</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MutableSizeHistogram
+              <pattern>${hadoop.groupid}.metrics2.lib.MutableSizeHistogram</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MutableSizeHistogram
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.lib.MutableTimeHistogram</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.lib.MutableTimeHistogram
+              <pattern>${hadoop.groupid}.metrics2.lib.MutableTimeHistogram</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.lib.MutableTimeHistogram
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.util.MetricQuantile</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.util.MetricQuantile
+              <pattern>${hadoop.groupid}.metrics2.util.MetricQuantile</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.util.MetricQuantile
               </shadedPattern>
             </relocation>
             <relocation>
-              <pattern>org.apache.hadoop.metrics2.util.MetricSampleQuantiles</pattern>
-              <shadedPattern>io.hops.hudi.org.apache.hadoop.metrics2.util.MetricSampleQuantiles
+              <pattern>${hadoop.groupid}.metrics2.util.MetricSampleQuantiles</pattern>
+              <shadedPattern>io.hops.hudi.${hadoop.groupid}.metrics2.util.MetricSampleQuantiles
               </shadedPattern>
             </relocation>
             <relocation>
@@ -1204,6 +1204,26 @@
       <dependency>
         <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-client</artifactId>
+        <version>${hadoop.version}</version>
+        <scope>provided</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>${hadoop.groupid}</groupId>
+        <artifactId>hadoop-client-runtime</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
         <exclusions>
@@ -2350,7 +2370,7 @@
         <hudi.spark.common.module>hudi-spark3-common</hudi.spark.common.module>
         <scalatest.version>${scalatest.spark3.version}</scalatest.version>
         <kafka.version>3.4.1</kafka.version>
-        <hive.storage.version>2.8.1</hive.storage.version>
+        <hive.storage.version>2.6.1.3</hive.storage.version>
         <!-- NOTE: Some Hudi modules require standalone Parquet/Orc/etc file-format dependency (hudi-hive-sync,
                    hudi-hadoop-mr, for ex). Since these Hudi modules might be used from w/in the execution engine(s)
                    bringing these file-formats as dependencies as well, we need to make sure that versions are
@@ -2385,7 +2405,7 @@
         <dependency>
           <groupId>${hive.groupid}</groupId>
           <artifactId>hive-storage-api</artifactId>
-          <version>${hive.version}</version>
+          <version>${hive.storage.version}</version>
         </dependency>
       </dependencies>
       <activation>
@@ -2500,7 +2520,7 @@
         <hudi.spark.common.module>hudi-spark3-common</hudi.spark.common.module>
         <scalatest.version>${scalatest.spark3.version}</scalatest.version>
         <kafka.version>3.4.1</kafka.version>
-        <hive.storage.version>2.8.1</hive.storage.version>
+        <hive.storage.version>2.6.1.3</hive.storage.version>
         <!-- NOTE: Some Hudi modules require standalone Parquet/Orc/etc file-format dependency (hudi-hive-sync,
                    hudi-hadoop-mr, for ex). Since these Hudi modules might be used from w/in the execution engine(s)
                    bringing these file-formats as dependencies as well, we need to make sure that versions are
@@ -2533,7 +2553,7 @@
         <dependency>
           <groupId>${hive.groupid}</groupId>
           <artifactId>hive-storage-api</artifactId>
-          <version>${hive.version}</version>
+          <version>${hive.storage.version}</version>
         </dependency>
       </dependencies>
       <activation>

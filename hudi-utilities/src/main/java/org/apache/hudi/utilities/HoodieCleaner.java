@@ -93,7 +93,7 @@ public class HoodieCleaner {
     public List<String> configs = new ArrayList<>();
 
     @Parameter(names = {"--spark-master"}, description = "spark master to use.")
-    public String sparkMaster = "kubernetes";
+    public String sparkMaster = "k8s";
 
     @Parameter(names = {"--help", "-h"}, help = true)
     public Boolean help = false;
