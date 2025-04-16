@@ -398,7 +398,7 @@
       <scope>compile</scope>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.hadoop</groupId>
+          <groupId>${hadoop.groupid}</groupId>
           <artifactId>hadoop-client</artifactId>
         </exclusion>
         <exclusion>

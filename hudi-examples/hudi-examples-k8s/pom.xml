@@ -156,7 +156,7 @@
 
         <!-- Hadoop -->
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-mapreduce-client-core</artifactId>
             <scope>runtime</scope>
             <version>${hadoop.version}</version>
@@ -179,28 +179,28 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-common</artifactId>
             <scope>runtime</scope>
             <version>${hadoop.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-auth</artifactId>
             <scope>runtime</scope>
             <version>${hadoop.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-hdfs</artifactId>
             <scope>runtime</scope>
             <version>${hadoop.version}</version>
         </dependency>
 
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-aws</artifactId>
             <scope>runtime</scope>
             <version>${hadoop.version}</version>

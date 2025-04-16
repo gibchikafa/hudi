@@ -129,6 +129,10 @@
           <groupId>javax.servlet</groupId>
           <artifactId>servlet-api</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
 
@@ -167,6 +171,16 @@
       <groupId>org.apache.hudi</groupId>
       <artifactId>hudi-common</artifactId>
       <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>
@@ -177,6 +191,12 @@
       <groupId>org.apache.hudi</groupId>
       <artifactId>hudi-hadoop-common</artifactId>
       <version>${project.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <dependency>
@@ -187,6 +207,10 @@
         <exclusion>
           <groupId>javax.servlet</groupId>
           <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -258,11 +282,11 @@
       <artifactId>spark-core_${scala.binary.version}</artifactId>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.hadoop</groupId>
+          <groupId>${hadoop.groupid}</groupId>
           <artifactId>hadoop-client-api</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.apache.hadoop</groupId>
+          <groupId>${hadoop.groupid}</groupId>
           <artifactId>hadoop-client-runtime</artifactId>
         </exclusion>
         <exclusion>
@@ -302,11 +326,11 @@
       <version>${spark.version}</version>
       <exclusions>
         <exclusion>
-          <groupId>org.apache.hadoop</groupId>
+          <groupId>${hadoop.groupid}</groupId>
           <artifactId>hadoop-client-api</artifactId>
         </exclusion>
         <exclusion>
-          <groupId>org.apache.hadoop</groupId>
+          <groupId>${hadoop.groupid}</groupId>
           <artifactId>hadoop-client-runtime</artifactId>
         </exclusion>
       </exclusions>
@@ -396,16 +420,26 @@
 
     <!-- Hadoop -->
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-client</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-mapreduce-client-common</artifactId>
       <exclusions>
         <exclusion>
           <groupId>javax.servlet</groupId>
           <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>io.hops.hive</groupId>
+          <artifactId>hive-llap-tez</artifactId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -434,6 +468,12 @@
       <groupId>${hive.groupid}</groupId>
       <artifactId>hive-service</artifactId>
       <version>${hive.version}</version>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Hoodie - Test -->
@@ -444,6 +484,12 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>
@@ -452,6 +498,12 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>
@@ -460,6 +512,12 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>
@@ -468,6 +526,12 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>
@@ -476,6 +540,12 @@
       <classifier>tests</classifier>
       <type>test-jar</type>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>io.hops</groupId>
+          <artifactId>hops-leader-election</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.apache.hudi</groupId>

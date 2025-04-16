@@ -116,9 +116,10 @@
     <log4j2.version>2.17.2</log4j2.version>
     <slf4j.version>1.7.36</slf4j.version>
     <joda.version>2.9.9</joda.version>
-    <hadoop.version>2.10.2</hadoop.version>
-    <hive.groupid>org.apache.hive</hive.groupid>
-    <hive.version>2.3.4</hive.version>
+    <hadoop.groupid>io.hops</hadoop.groupid>
+    <hadoop.version>3.2.0.0-SNAPSHOT</hadoop.version>
+    <hive.groupid>io.hops.hive</hive.groupid>
+    <hive.version>3.0.0.5</hive.version>
     <hive.parquet.version>1.10.1</hive.parquet.version>
     <hive.avro.version>1.11.4</hive.avro.version>
     <presto.version>0.273</presto.version>
@@ -136,7 +137,7 @@
     <httpcore.version>4.4.16</httpcore.version>
     <httpclient.version>4.5.14</httpclient.version>
     <spark.version>${spark3.version}</spark.version>
-    <spark3.version>3.5.1</spark3.version>
+    <spark3.version>3.5.5</spark3.version>
     <sparkbundle.version></sparkbundle.version>
     <flink1.20.version>1.20.0</flink1.20.version>
     <flink1.19.version>1.19.1</flink1.19.version>
@@ -1197,7 +1198,7 @@
 
       <!-- Hadoop -->
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-client</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1217,7 +1218,7 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-common</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1238,10 +1239,14 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-hdfs</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1250,10 +1255,14 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-auth</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1269,7 +1278,7 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-mapreduce-client-core</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1286,10 +1295,14 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-mapreduce-client-common</artifactId>
         <version>${hadoop.version}</version>
         <scope>provided</scope>
@@ -1309,7 +1322,7 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-hdfs</artifactId>
         <classifier>tests</classifier>
         <scope>test</scope>
@@ -1319,10 +1332,14 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>*</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hadoop</groupId>
+        <groupId>${hadoop.groupid}</groupId>
         <artifactId>hadoop-common</artifactId>
         <classifier>tests</classifier>
         <version>${hadoop.version}</version>
@@ -1342,6 +1359,10 @@
           <exclusion>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>*</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -1389,6 +1410,14 @@
             <groupId>org.apache.hbase</groupId>
             <artifactId>*</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>${hive.groupid}</groupId>
+            <artifactId>hive-llap-server</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>${hive.groupid}</groupId>
+            <artifactId>hive-llap-tez</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -1432,6 +1461,14 @@
           <exclusion>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>${hive.groupid}</groupId>
+            <artifactId>hive-llap-server</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>${hive.groupid}</groupId>
+            <artifactId>hive-llap-tez</artifactId>
           </exclusion>
           <exclusion>
             <groupId>log4j</groupId>
@@ -1851,6 +1888,17 @@
       <id>confluent</id>
       <url>https://packages.confluent.io/maven/</url>
     </repository>
+    <repository>
+      <id>Hops</id>
+      <name>Hops Repo</name>
+      <url>https://archiva.hops.works/repository/Hops/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
   </repositories>
 
   <profiles>
@@ -2043,11 +2091,12 @@
           <value>true</value>
         </property>
       </activation>
+      <!--
       <modules>
         <module>docker/hoodie/hadoop</module>
         <module>hudi-integ-test</module>
         <module>packaging/hudi-integ-test-bundle</module>
-      </modules>
+      </modules> -->
       <properties>
         <skipUTs>true</skipUTs>
         <skipFTs>true</skipFTs>
@@ -2332,7 +2381,7 @@
         <dependency>
           <groupId>${hive.groupid}</groupId>
           <artifactId>hive-storage-api</artifactId>
-          <version>${hive.storage.version}</version>
+          <version>${hive.version}</version>
         </dependency>
       </dependencies>
       <activation>
@@ -2480,7 +2529,7 @@
         <dependency>
           <groupId>${hive.groupid}</groupId>
           <artifactId>hive-storage-api</artifactId>
-          <version>${hive.storage.version}</version>
+          <version>${hive.version}</version>
         </dependency>
       </dependencies>
       <activation>

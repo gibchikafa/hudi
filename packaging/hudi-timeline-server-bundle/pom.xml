@@ -85,7 +85,7 @@
 
         <!-- Hadoop -->
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-hdfs</artifactId>
             <!-- Need these exclusions to make sure JavaSparkContext can be setup. https://issues.apache.org/jira/browse/SPARK-1693 -->
             <exclusions>
@@ -104,7 +104,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-common</artifactId>
             <exclusions>
                 <exclusion>
@@ -122,7 +122,7 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-client</artifactId>
             <exclusions>
                 <exclusion>
@@ -218,6 +218,10 @@
                     <relocation>
                         <pattern>org.apache.avro.</pattern>
                         <shadedPattern>org.apache.hudi.org.apache.avro.</shadedPattern>
+                    </relocation>
+                    <relocation>
+                        <pattern>org.eclipse.jetty.</pattern>
+                        <shadedPattern>org.apache.hudi.org.apache.jetty.</shadedPattern>
                     </relocation>
                 </relocations>
             </configuration>

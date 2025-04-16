@@ -272,7 +272,7 @@
 
         <!-- Hadoop -->
         <dependency>
-            <groupId>org.apache.hadoop</groupId>
+            <groupId>${hadoop.groupid}</groupId>
             <artifactId>hadoop-mapreduce-client-core</artifactId>
             <scope>compile</scope>
             <exclusions>

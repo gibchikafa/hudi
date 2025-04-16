@@ -280,6 +280,10 @@
                   <pattern>org.roaringbitmap.</pattern>
                   <shadedPattern>org.apache.hudi.org.roaringbitmap.</shadedPattern>
                 </relocation>
+                <relocation>
+                  <pattern>org.eclipse.jetty.</pattern>
+                  <shadedPattern>org.apache.hudi.org.apache.jetty.</shadedPattern>
+                </relocation>
               </relocations>
               <filters>
                 <filter>
@@ -423,13 +427,13 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-hdfs</artifactId>
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-common</artifactId>
       <classifier>tests</classifier>
       <exclusions>
@@ -537,7 +541,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-mapreduce-client-common</artifactId>
       <exclusions>
         <exclusion>
@@ -548,7 +552,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.hadoop</groupId>
+      <groupId>${hadoop.groupid}</groupId>
       <artifactId>hadoop-client</artifactId>
     </dependency>
 
