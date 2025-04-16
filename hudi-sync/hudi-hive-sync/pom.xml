@@ -60,7 +60,7 @@
       <version>${project.version}</version>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-hadoop-mr</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -169,7 +169,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-io</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
@@ -177,7 +177,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-hadoop-common</artifactId>
       <version>${project.version}</version>
       <classifier>tests</classifier>
@@ -185,7 +185,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-tests-common</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>

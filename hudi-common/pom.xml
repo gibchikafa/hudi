@@ -104,7 +104,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-io</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -196,7 +196,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-io</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -234,7 +234,7 @@
     </dependency>
 
     <dependency>
-      <groupId>org.apache.hudi</groupId>
+      <groupId>io.hops.hudi</groupId>
       <artifactId>hudi-tests-common</artifactId>
       <version>${project.version}</version>
       <scope>test</scope>
