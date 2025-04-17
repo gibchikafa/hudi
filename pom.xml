@@ -117,10 +117,10 @@
     <slf4j.version>1.7.36</slf4j.version>
     <joda.version>2.9.9</joda.version>
     <hadoop.groupid>io.hops</hadoop.groupid>
-    <hadoop.version>3.2.0.16-EE-SNAPSHOT</hadoop.version>
+    <hadoop.version>3.2.0.9-RC0</hadoop.version>
     <hive.groupid>io.hops.hive</hive.groupid>
-    <hive.version>3.0.0.5</hive.version>
-    <hive.parquet.version>1.10.1</hive.parquet.version>
+    <hive.version>3.0.0.11</hive.version>
+    <hive.parquet.version>1.11.0</hive.parquet.version>
     <hive.avro.version>1.11.4</hive.avro.version>
     <presto.version>0.273</presto.version>
     <trino.version>390</trino.version>
@@ -1442,6 +1442,10 @@
             <groupId>${hive.groupid}</groupId>
             <artifactId>hive-llap-tez</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -1574,6 +1578,10 @@
             <groupId>org.apache.hbase</groupId>
             <artifactId>*</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -1615,10 +1623,14 @@
             <groupId>org.apache.hbase</groupId>
             <artifactId>*</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>org.apache.hive</groupId>
+        <groupId>${hive.groupid}</groupId>
         <artifactId>hive-exec</artifactId>
         <version>${hive.version}</version>
         <scope>provided</scope>
@@ -1670,6 +1682,10 @@
           <exclusion>
             <groupId>org.apache.hbase</groupId>
             <artifactId>*</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
