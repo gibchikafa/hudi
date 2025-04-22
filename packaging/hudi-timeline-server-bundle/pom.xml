@@ -165,9 +165,9 @@
                          Include hudi-timeline-server with javalin dependencies. 
                          hadoop deps are to be provided at runtime. see run_server.sh 
                       -->
-                      <include>org.apache.hudi:hudi-hadoop-common</include>
-                      <include>org.apache.hudi:hudi-common</include>
-                      <include>org.apache.hudi:hudi-timeline-service</include>
+                      <include>io.hops.hudi:hudi-hadoop-common</include>
+                      <include>io.hops.hudi:hudi-common</include>
+                      <include>io.hops.hudi:hudi-timeline-service</include>
                       <include>org.mortbay.jetty:jetty</include>
                       <include>org.mortbay.jetty:jetty-util</include>
                       <include>io.javalin:javalin</include>
@@ -205,23 +205,23 @@
                 <relocations combine.children="append">
                     <relocation>
                         <pattern>org.apache.commons.io.</pattern>
-                        <shadedPattern>org.apache.hudi.org.apache.commons.io.</shadedPattern>
+                        <shadedPattern>io.hops.hudi.org.apache.commons.io.</shadedPattern>
                     </relocation>
                     <relocation>
                         <pattern>org.openjdk.jol.</pattern>
-                        <shadedPattern>org.apache.hudi.org.openjdk.jol.</shadedPattern>
+                        <shadedPattern>io.hops.hudi.org.openjdk.jol.</shadedPattern>
                     </relocation>
                     <relocation>
                         <pattern>com.fasterxml.jackson.</pattern>
-                        <shadedPattern>org.apache.hudi.com.fasterxml.jackson.</shadedPattern>
+                        <shadedPattern>io.hops.hudi.com.fasterxml.jackson.</shadedPattern>
                     </relocation>
                     <relocation>
                         <pattern>org.apache.avro.</pattern>
-                        <shadedPattern>org.apache.hudi.org.apache.avro.</shadedPattern>
+                        <shadedPattern>io.hops.hudi.org.apache.avro.</shadedPattern>
                     </relocation>
                     <relocation>
                         <pattern>org.eclipse.jetty.</pattern>
-                        <shadedPattern>org.apache.hudi.org.apache.jetty.</shadedPattern>
+                        <shadedPattern>io.hops.hudi.org.apache.jetty.</shadedPattern>
                     </relocation>
                 </relocations>
             </configuration>
@@ -235,7 +235,7 @@
                         <transformers>
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                             <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                <mainClass>org.apache.hudi.timeline.service.TimelineService</mainClass>
+                                <mainClass>io.hops.hudi.timeline.service.TimelineService</mainClass>
                             </transformer>
                         </transformers>
                     </configuration>

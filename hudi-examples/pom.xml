@@ -30,9 +30,9 @@
   <modules>
     <module>hudi-examples-common</module>
     <module>hudi-examples-spark</module>
-    <!--<module>hudi-examples-flink</module> -->
+    <module>hudi-examples-flink</module>
     <module>hudi-examples-java</module>
-    <!-- <module>hudi-examples-k8s</module> -->
+    <module>hudi-examples-k8s</module>
   </modules>
 
 </project>

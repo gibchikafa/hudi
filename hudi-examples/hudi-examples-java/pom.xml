@@ -94,6 +94,24 @@
     </build>
 
     <dependencies>
+        <!-- Hadoop -->
+        <dependency>
+            <groupId>${hadoop.groupid}</groupId>
+            <artifactId>hadoop-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${hadoop.groupid}</groupId>
+            <artifactId>hadoop-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${hadoop.groupid}</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${hadoop.groupid}</groupId>
+            <artifactId>hadoop-auth</artifactId>
+        </dependency>
+
         <!-- Logging -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
